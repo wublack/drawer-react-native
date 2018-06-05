@@ -9,7 +9,8 @@ import {
   View,
   TouchableOpacity,
   Image,
-  ScrollView
+  ScrollView,
+  StatusBar,
 } from 'react-native';
 import {DrawerNavigator} from 'react-navigation';
 // import DrawerMain from 'drawer';

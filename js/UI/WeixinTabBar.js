@@ -8,7 +8,8 @@ import {
   TouchableOpacity,
   Text,
   Image,
-  Dimensions
+  Dimensions,
+  StatusBar
 } from 'react-native';
 const PropTypes = require('prop-types');
 const deviceW = Dimensions.get('window').width
@@ -49,10 +50,27 @@ class WeixinTabBar extends Component {
       </TouchableOpacity>
     );
   }
+  state = {
+    animated: true,
+    hidden: false,
+    backgroundColor:'white',
+    translucent:false,
+    barStyle:'dark-content',
+    networkActivityIndicatorVisible:false,
+  }
 
   render() {
     return (
       <View style={styles.main}>
+        <StatusBar
+          animated={this.state.animated}
+          hidden={this.state.hidden}
+          backgroundColor={this.state.backgroundColor}
+          translucent={this.state.translucent}
+          barStyle={this.state.barStyle}
+          networkActivityIndicatorVisible={this.state.networkActivityIndicatorVisible}
+          showHideTransition={this.state.showHideTransition}
+        />
         <TouchableOpacity style={styles.leftTitle} onPress={() => {
           this.props.leftClick()
         }}>
