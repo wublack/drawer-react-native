@@ -1,32 +1,36 @@
 /**
  * Created by admin on 2018/1/2.
  */
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
+    Platform,
+    StyleSheet,
+    Text,
+    View
 } from 'react-native';
 
-class MessageIndex extends Component{
+import Banner from './banner';
 
-  static navigationOptions = {
-    tabBarLabel:'消息',
-  }
+class MessageIndex extends Component {
 
-  constructor(){
-    super();
-  }
+    constructor() {
+        super();
+        console.log('message index')
+    }
 
-  render(){
-    return (
-      <View>
-        <Text>Message index</Text>
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={styles.container}>
+                <Banner style={{height:130}}/>
+            </View>
+        );
+    }
 
 }
 
-module.exports= MessageIndex;
+const styles = StyleSheet.create({
+    container: {
+
+    }
+});
+module.exports = MessageIndex;

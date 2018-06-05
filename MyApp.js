@@ -13,21 +13,19 @@ import {
 import ScrollableTabView from 'react-native-scrollable-tab-view'
 import WeixinTabBar from './js/UI/WeixinTabBar'
 const PropTypes = require('prop-types');
+import Message from './js/message/index';
 
 class MainScroll extends Component {
   setParentState(args){
     this.props.setParentState(args)
   }
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     tabNames: ['消息', '订单'],
-  //   }
-  // }
-
-  state = {
-    tabNames: ['消息', '订单'],
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabNames: ['消息', '订单'],
+    }
   }
+
 
   render() {
     const tabNames = this.state.tabNames;
@@ -43,8 +41,8 @@ class MainScroll extends Component {
                       }}
         />
       } locked={true}>
-        <View tabLabel="t1"><Text>sadfa</Text></View>
-        <View tabLabel="t2"><Text>sadfa3</Text></View>
+        <View ><Text>sadfa</Text></View>
+        <Message style={{backgroundColor:'red',flex:1}}/>
       </ScrollableTabView>
     );
   }

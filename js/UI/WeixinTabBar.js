@@ -10,7 +10,9 @@ import {
   Image,
   Dimensions,
   StatusBar
+
 } from 'react-native';
+
 const PropTypes = require('prop-types');
 const deviceW = Dimensions.get('window').width
 
@@ -50,13 +52,14 @@ class WeixinTabBar extends Component {
       </TouchableOpacity>
     );
   }
+
   state = {
     animated: true,
     hidden: false,
-    backgroundColor:'white',
-    translucent:false,
-    barStyle:'dark-content',
-    networkActivityIndicatorVisible:false,
+    backgroundColor: 'white',
+    translucent: false,
+    barStyle: 'dark-content',
+    networkActivityIndicatorVisible: false,
   }
 
   render() {
@@ -88,12 +91,14 @@ class WeixinTabBar extends Component {
       </View>
     );
   }
+
 }
 
 const styles = StyleSheet.create({
   leftTitle: {
     width: 50,
-    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   main: {
     flexDirection: 'row',
@@ -108,23 +113,23 @@ const styles = StyleSheet.create({
     marginRight: 80
   },
   drawer: {
-    width: 15,
-    height: 15,
-    alignSelf: 'center',
+    width: 20,
+    height: 22,
+
   },
   tab: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderBottomColor:'transparent',
-    borderBottomWidth:0.5
+    borderBottomColor: 'transparent',
+    borderBottomWidth: 0.5
   },
   tabSelected: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    borderBottomColor:'#851b25',
-    borderBottomWidth:0.5
+    borderBottomColor: '#851b25',
+    borderBottomWidth: 0.5
   },
   rightTitle: {
     alignSelf: 'center',
