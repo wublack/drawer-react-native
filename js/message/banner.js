@@ -31,18 +31,21 @@ class Banner extends Component {
     return (
       <View style={styles.bannerMain}>
         {/*可以左右滚动区域*/}
-        <ScrollView style={styles.bannerScroll}
-                    horizontal={true}
-                    pagingEnabled={true}
-                    showsHorizontalScrollIndicator={false}
-                    onMomentumScrollEnd={this.onScrollAnimationEnd }
-        >
-          {this.renderScrollItem()}
-        </ScrollView>
+        {/* <ScrollView style={styles.bannerScroll}
+         horizontal={true}
+         pagingEnabled={true}
+         showsHorizontalScrollIndicator={false}
+         onMomentumScrollEnd={this.onScrollAnimationEnd }
+         >
+         {this.renderScrollItem()}
+         </ScrollView>*/}
         {/*导航点*/}
-        <View style={styles.cirl}>
-          {this.renderIndicator()}
-        </View>
+        {/*<View style={styles.cirl}>
+         {this.renderIndicator()}
+         </View>*/}
+        <Swiper  paginationStyle={{bottom: 10}} autoplay={true} loop={true}>
+          {this.renderScrollItem()}
+        </Swiper>
       </View>
     );
   }
@@ -91,20 +94,49 @@ class Banner extends Component {
       console.log(this.state.array[i].img_path)
       let urlAddress = 'https://file.1sju.com/' + this.state.array[i].img_path;
       itemArr.push(
-        <View key={i} style={styles.bannerItem}>
-          <View style={{margin:20}}>
-            <Image source={{uri: urlAddress}} style={{height: 120, width: width-40}}
-                   resizeMode={Image.resizeMode.stretch}/>
-          </View>
-        </View>
+          <Image key={i} source={{uri: urlAddress}} style={{height: 120, width: width - 40,flex:1}}
+                 resizeMode={Image.resizeMode.stretch}/>
       )
     }
     return itemArr;
   }
 
+  renderSwiper(){
+    let itemSwiper=[];
+    itemSwiper.push(
+      <Swiper  paginationStyle={{bottom: 10}} autoplay={true} loop={true}>
+        {this.renderScrollItem()}
+      </Swiper>
+    )
+    return itemSwiper;
+  }
+
 }
 
 const styles = StyleSheet.create({
+  slide1: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#9DD6EB',
+  },
+  slide2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#97CAE5',
+  },
+  slide3: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#92BBD9',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 30,
+    fontWeight: 'bold',
+  },
   bannerMain: {
     backgroundColor: 'white',
     height: 130,
@@ -117,6 +149,7 @@ const styles = StyleSheet.create({
   bannerItem: {
     width: width,
     height: 130,
+    flex: 1,
     // backgroundColor: 'yellow'
   },
   cirl: {

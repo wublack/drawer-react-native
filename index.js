@@ -2,6 +2,6 @@ import { AppRegistry } from 'react-native';
 import App from './App';
 import MyApp from './MyApp';
 
-import Dermer from './js/main';
+import Dermer from './js/home';
 
 AppRegistry.registerComponent('ReactNativeDemo', () => Dermer);
