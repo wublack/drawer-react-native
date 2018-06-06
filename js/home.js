@@ -9,17 +9,17 @@ import MessagePage from "./message/index";
 import HomePage from './home/index';
 
 const SELECTED_TAG = 'design';
-const SELECTED_TITLE = '精选';
+const SELECTED_TITLE = '首页';
 const SELECTED_NORMAL = require('../imgs/design/first_tab_img_normal.png');
 const SELECTED_FOCUS = require('../imgs/design/first_tab_img_press.png');
 
 const EXPLORE_TAG = 'message';
-const EXPLORE_TITLE = '发现';
+const EXPLORE_TITLE = '消息';
 const EXPLORE_NORMAL = require('../imgs/message/message_tab_img_normal.png');
 const EXPLORE_FOCUS = require('../imgs/message/message_tab_img_press.png');
 
 const FOLLOW_TAG = 'home';
-const FOLLOW_TITLE = '关注';
+const FOLLOW_TITLE = '我的';
 const FOLLOW_NORMAL = require('../imgs/home/me_tab_img_normal.png');
 const FOLLOW_FOCUS = require('../imgs/home/me_tab_img_press.png');
 
@@ -96,19 +96,19 @@ const MainPageStyle = StyleSheet.create(
       height: 42,
     },
     tab_icon: {
-      width: 35,
-      height: 35,
+      width: 20,
+      height: 20,
       resizeMode: 'contain',
     },
     tab_title: {
       color: "#929292",
       fontSize: 8,
-      marginTop:-4,
+      marginTop:4,
     },
     tab_title_selected: {
       color: "#333333",
       fontSize: 8,
-      marginTop:-4,
+      marginTop:4,
     }
   }
 )

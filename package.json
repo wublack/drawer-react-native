@@ -11,6 +11,7 @@
     "react": "16.0.0",
     "react-native": "0.51.0",
     "react-native-drawer": "^2.5.0",
+    "react-native-linear-gradient": "^2.4.0",
     "react-native-scrollable-tab-view": "^0.8.0",
     "react-native-swiper": "^1.5.13",
     "react-native-tab-navigator": "^0.3.4",

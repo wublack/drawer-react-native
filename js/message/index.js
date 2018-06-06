@@ -10,8 +10,6 @@ import {
   View
 } from 'react-native';
 
-import Banner from './banner';
-const deviceH = Dimensions.get('window').height;
 
 class MessageIndex extends Component {
 
@@ -23,9 +21,7 @@ class MessageIndex extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Banner style={{height: 130}}/>
-        <View style={styles.content}>
-        </View>
+        <Text>MESSAGE</Text>
       </View>
     );
   }
@@ -36,7 +32,6 @@ const styles = StyleSheet.create({
   container: {},
   content: {
     backgroundColor: 'red',
-    height: deviceH - 130,
   }
 
 });

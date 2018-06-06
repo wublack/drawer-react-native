@@ -28,13 +28,9 @@ class HomeIndex extends Component {
 
   render() {
     return (
-      <ScrollableTabView renderTabBar={() => <DefaultTabBar/>} tabBarPosition="bottom" onScroll={(postion) => {
-        alert(this.props.navigation.navigate('Home'));
-      }
-      }>
-        <View tabLabel="view1"><Text>dstf</Text></View>
-        <View tabLabel="view2"><Text>dstf</Text></View>
-      </ScrollableTabView>
+      <View>
+        <Text>我的</Text>
+      </View>
     );
   }
 
