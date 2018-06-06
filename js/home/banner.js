@@ -38,20 +38,7 @@ class Banner extends Component {
         thiz = this;
         return (
             <View style={styles.bannerMain}>
-                {/*可以左右滚动区域*/}
-                {/* <ScrollView style={styles.bannerScroll}
-         horizontal={true}
-         pagingEnabled={true}
-         showsHorizontalScrollIndicator={false}
-         onMomentumScrollEnd={this.onScrollAnimationEnd }
-         >
-         {this.renderScrollItem()}
-         </ScrollView>*/}
-                {/*导航点*/}
-                {/*<View style={styles.cirl}>
-         {this.renderIndicator()}
-         </View>*/}
-                <Swiper paginationStyle={{bottom: 10}} autoplay={true}>
+                <Swiper paginationStyle={{bottom: 10}} >
                     {this.renderScrollItem()}
                 </Swiper>
             </View>
@@ -102,7 +89,7 @@ class Banner extends Component {
         for (var i = 0; i < this.state.images.length; i++) {
             console.log(this.state.images[i].source)
             itemArr.push(
-                <Image key={i} source={{uri: this.state.images[i].source}} style={{height: 120, width: width - 40, flex: 1}}
+                <Image key={i} source={{uri: this.state.images[i].source}} style={{height: 180, width: width-40, flex: 1,marginLeft:20}}
                        resizeMode={Image.resizeMode.stretch}/>
             )
         }
@@ -122,24 +109,6 @@ class Banner extends Component {
 }
 
 const styles = StyleSheet.create({
-    slide1: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#9DD6EB',
-    },
-    slide2: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#97CAE5',
-    },
-    slide3: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#92BBD9',
-    },
     text: {
         color: '#fff',
         fontSize: 30,
