@@ -93,7 +93,8 @@ class MainPage extends Component {
 const MainPageStyle = StyleSheet.create(
   {
     tab_container: {
-      height: 42,
+      flex:1,
+      backgroundColor:'white'
     },
     tab_icon: {
       width: 20,
@@ -101,14 +102,12 @@ const MainPageStyle = StyleSheet.create(
       resizeMode: 'contain',
     },
     tab_title: {
-      color: "#929292",
-      fontSize: 8,
-      marginTop:4,
+      color: "#999999",
+      fontSize: 10,
     },
     tab_title_selected: {
       color: "#333333",
-      fontSize: 8,
-      marginTop:4,
+      fontSize: 10,
     }
   }
 )
