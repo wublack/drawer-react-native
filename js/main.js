@@ -11,7 +11,7 @@ import {
   ScrollView
 } from 'react-native';
 import {DrawerNavigator} from 'react-navigation';
-import DraftsScreen from '../MyApp'
+import DraftsScreen from './message/MyApp'
 import InboxScreen from './home/drawerleft'
 import Drawer from 'react-native-drawer';
 

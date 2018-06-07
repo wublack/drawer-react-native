@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native';
 import App from './App';
-import MyApp from './MyApp';
+import MyApp from './js/message/MyApp';
 
 import Dermer from './js/home';
 

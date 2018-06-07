@@ -74,11 +74,7 @@ class WeixinTabBar extends Component {
           networkActivityIndicatorVisible={this.state.networkActivityIndicatorVisible}
           showHideTransition={this.state.showHideTransition}
         />
-        <TouchableOpacity style={styles.leftTitle} onPress={() => {
-          this.props.leftClick()
-        }}>
-          <Image source={{uri: 'icon_me'}} style={styles.drawer}/>
-        </TouchableOpacity>
+
         <View style={styles.tabs}>
           {this.props.tabs.map((tab, i) => this.renderTabOption(tab, i))}
         </View>

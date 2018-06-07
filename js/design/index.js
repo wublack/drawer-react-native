@@ -2,7 +2,7 @@
  * Created by admin on 2018/6/6.
  */
 import React, {Component} from 'react';
-import {View, Text, ListView, StyleSheet, Dimensions, StatusBar, ScrollView,RefreshControl} from 'react-native';
+import {View, Text, ListView, StyleSheet, Dimensions, StatusBar, ScrollView, RefreshControl} from 'react-native';
 
 
 import Banner from '../home/banner';
@@ -66,6 +66,23 @@ export default class DesignHome extends Component {
                             <Banner/>
                         </View>
                         <View style={styles.content}>
+                            <Text>有5个订单需要您的操作...</Text>
+                            <View style={styles.opreate}>
+                                <Text style={styles.pay}>待付款(2)</Text>
+                                <Text style={styles.pay}>待审核(2)</Text>
+                                <Text style={styles.pay}>待上传数据(1)</Text>
+                            </View>
+                            <View style={styles.department}>
+                                <Text style={styles.current}>选择科室</Text>
+                                <View style={styles.departnum}>
+                                    <Text style={styles.current}>2</Text>
+                                    <Text style={styles.total}>/5</Text>
+                                </View>
+                            </View>
+                            <View>
+                                <Banner/>
+                            </View>
+
                         </View>
                     </View>
                 </View>
@@ -77,8 +94,52 @@ export default class DesignHome extends Component {
 const styles = StyleSheet.create({
     container: {},
     content: {
-        backgroundColor: 'red',
-        height: deviceH,
+        backgroundColor: 'white',
+        paddingLeft: 20,
+        paddingTop: 20
+    },
+    opreate: {
+        flexDirection: 'row',
+        marginTop:10,
+    },
+    department:{
+        marginTop:30,
+        marginRight:20,
+        flexDirection: 'row',
+        justifyContent:'space-between'
+    },
+    departnum:{
+        flexDirection: 'row',
+    },
+    current:{
+        color:'#333333',
+        fontSize:18,
+    },
+    total:{
+        fontSize:12,
+        color:'rgba(179,190,201,1)',
+        alignSelf:'flex-end'
+    },
+    pay: {
+        marginRight:10,
+        position: 'relative',
+        paddingLeft:5,
+        paddingRight:5,
+        paddingTop:2,
+        paddingBottom:2,
+        backgroundColor: '#fff',
+        borderRadius: 3,
+        borderWidth: 1,
+        overflow: 'hidden',
+        borderColor:'rgba(238,238,238,1)',
+        //以下是阴影属性：
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.2,
+        shadowRadius: 5,
+        shadowColor:'rgba(238,238,238,1)',
+        //注意：这一句是可以让安卓拥有灰色阴影
+        elevation: 2,
+        // zIndex: Global.isIOS() ? 1 : 0
     },
     header: {
         width: deviceW,

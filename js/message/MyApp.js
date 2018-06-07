@@ -11,9 +11,9 @@ import {
   ToastAndroid,
 } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view'
-import WeixinTabBar from './js/UI/WeixinTabBar'
+import WeixinTabBar from '../UI/WeixinTabBar'
 const PropTypes = require('prop-types');
-import Message from './js/message/index';
+import Message from './index';
 
 class MainScroll extends Component {
   setParentState(args){
@@ -42,7 +42,7 @@ class MainScroll extends Component {
         />
       } locked={true}>
         <View ><Text>sadfa</Text></View>
-        <Message style={{backgroundColor:'red',flex:1}}/>
+        <View><Text>asdfasdf</Text></View>
       </ScrollableTabView>
     );
   }
